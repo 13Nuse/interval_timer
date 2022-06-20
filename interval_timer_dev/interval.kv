@@ -1,0 +1,29 @@
+TimerPage:
+
+<TimerPage>:
+    cols: 3
+    ToggleButton:
+        text: "OFF"
+        size_hint: 1, 1
+        on_state: root.on_toggle_button_state(self)
+    Button:
+        text: "Click Here to add"
+        on_press: root.on_button_click()
+    Label:
+        text: root.my_visual_data
+        font_name: "fonts/ARDESTINE.ttf"
+        font_size: "80dp"
+        color: 1, .5, 1, 1
+    TextInput:
+        id: my_text_input
+        size_hint: 1, None
+        height: "100dp"
+        text: "Username"
+        multiline: False
+        on_text_validate: root.on_text_validate(self)
+    Label:
+        text: root.user_input_str
+    TextInput:
+        size_hint: 1, None
+        height: "100dp"
+        text: "Password"
