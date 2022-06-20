@@ -1,14 +1,14 @@
 TimerPage:
 
 <TimerPage>:
-    cols: 3
-    ToggleButton:
-        text: "OFF"
-        size_hint: 1, 1
-        on_state: root.on_toggle_button_state(self)
+    cols: 4
     Button:
-        text: "Click Here to add"
-        on_press: root.on_button_click()
+        text: "Start"
+        size_hint: 1, 1
+        on_press: root.on_start_click()
+    Button:
+        text: "cancel"
+        on_press: root.on_cancel_click()
     Label:
         text: root.my_visual_data
         font_name: "fonts/ARDESTINE.ttf"
@@ -17,13 +17,16 @@ TimerPage:
     TextInput:
         id: my_text_input
         size_hint: 1, None
-        height: "100dp"
-        text: "Username"
+        height: "50dp"
+        text: "I dont know yet"
         multiline: False
         on_text_validate: root.on_text_validate(self)
     Label:
         text: root.user_input_str
+        font_name: "fonts/ARDESTINE.ttf"
+        font_size: "160dp"
+        color: .22, .86, .39, 1
     TextInput:
         size_hint: 1, None
-        height: "100dp"
-        text: "Password"
+        height: "50dp"
+        text: "also dont know"

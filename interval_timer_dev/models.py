@@ -11,12 +11,12 @@ from kivy.core.audio import SoundLoader
 
 
 class UserInputModel:
-    def __init__(self,
-                 starting_countdown,
-                 number_of_sets,
-                 seconds_per_sets,
-                 seconds_of_rest,
-                 sets_finished):
+    def user_input(self,
+                   starting_countdown,
+                   number_of_sets,
+                   seconds_per_sets,
+                   seconds_of_rest,
+                   sets_finished):
         self.starting_countdown = int(input('countdown: '))
         self.number_of_sets = int(input('number of sets: '))
         self.seconds_per_set = int(input('Seconds: '))
