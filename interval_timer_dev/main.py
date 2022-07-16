@@ -25,6 +25,13 @@ class TimerPage(BoxLayout, UserInputModel):
     def on_cancel_click(self):
         print('button cancel clicked')
 
+    def on_toggle_button_state(self, toggle_button):
+        print("toggle state: " + toggle_button.state)
+        if toggle_button.state == "normal":
+            toggle_button.text = "START"
+        else:
+            toggle_button.text = "STOP"
+
     def start_counter(self):
         pass
 
